@@ -19,3 +19,4 @@
 var date =  moment().format("[Hello, Today is] dddd, MMMM Do YYYY");
 $("#currentDay").text(date)
 console.log("hello", date)
+

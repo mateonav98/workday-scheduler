@@ -26,8 +26,11 @@ textarea{
 }
 
 .time-block{
-  text-align: center;
+  text-align:left;
   border-radius: 15px;
+  width: 1200px;
+  justify-content: center;
+  padding: 20px;
 }
 
 .row {
@@ -68,4 +71,29 @@ textarea{
 .saveBtn i:hover {
   font-size: 20px;
   transition: all .3s ease-in-out;
+}
+
+
+
+.container-xl .row {
+  display:table-row;
+}
+
+.container-xl .row {
+  display:table-cell;
+  padding:5px;
+  border:1px solid #333;
+}
+
+.row {
+  display:table;
+  border:1px solid #333;
+  padding:5px;
+}
+
+.input-group-text {
+  text-align: left;
+  justify-content: left;
+  margin-right: 15px;
+  width: 70px;
 }
