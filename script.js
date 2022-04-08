@@ -20,6 +20,25 @@ console.log(date)
 
 var currentTime = moment().format('H');
 console.log()
+function colorUpdater() {
+    const momentTime = moment().hours();
+
+    $('.form-control').each(function() {
+        let myBlockTime = parseInt($(this).attr('id').split('-')[1]);
+        if(myBlockTime < momentTime) {
+            $(this).addClass('past')
+        }else if(myBlockTime == momentTime) {
+            $(this).removeClass('past')
+            $(this).addClass('present')
+        }
+        else {
+            $(this).removeClass('past');
+            $(this).removeClass('present');
+            $(this).addClass('future');
+        }
+    })
+}
+colorUpdater();
 
 // $('.form-control')
 //   .each(function(){
@@ -42,25 +61,19 @@ var text = document.querySelector("#text")
 
 function getTextData() {
 var text = localStorage.getItem("text");
+text.textContent=text;
+
 console.log(text)
 }
+getTextData();
 
 saveBtn.addEventListener("click", function() {
     var text = document.querySelector("#text").value
-    text.textContent=text;
     localStorage.setItem("text", text);
     getTextData()
 })
 
 
+$('#color-9  .form-control').val(localStorage.getItem('color-9'))
+$('#color-10  .form-control').val(localStorage.getItem('color-10'))
 
-// function getTextData() {
-//     localStorage['text']=document.getElementById('text').value;
-//     console.log()
-// }
-// getTextData()
-// function addTextData() {
-//     document.getElementById('text').value = localStorage['text']
-//     console.log()
-// }
-// addTextData()
