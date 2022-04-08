@@ -8,7 +8,7 @@ Planner to schedule all your work day needs! Schedule projects, meetings, or eve
 ## Visuals
 
 
-![alt_text](webpagerecording.gif)
+![alt_text](workday.gif)
 
 ## Usage 
 
