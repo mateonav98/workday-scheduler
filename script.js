@@ -1,7 +1,4 @@
 // Pseudocode: GIVEN I am using a daily planner to create a schedule
-// WHEN I open the planner
-// WHEN I view the timeblocks for that day
-// THEN each timeblock is color coded to indicate whether it is in the past, present, or future
 // WHEN I click the save button for that timeblock
 // THEN the text for that event is saved in local storage
 // WHEN I refresh the page
@@ -40,40 +37,35 @@ function colorUpdater() {
 }
 colorUpdater();
 
-// $('.form-control')
-//   .each(function(){
-//     var val = parseInt($(this).prop('id'));
-//     if(val > currentTime && val < currentTime + 12){
-//       $(this).css('background-color','green');
-//     }else if(val < currentTime && val > currentTime-12){
-//       $(this).css('background-color','Gray');
-//     }else if(val === currentTime){
-//       $(this).css('background-color','red');
-//     }else{
-//       $(this).css('background-color','White');
-//     }
-//   });
 
-// localStorage.setItem()
 
 var saveBtn = document.querySelector("#button-addon2");
-var text = document.querySelector("#text")
+var text6 = document.querySelector("#text6")
+var text7 = document.querySelector("#text7")
 
-function getTextData() {
-var text = localStorage.getItem("text");
-text.textContent=text;
+function getText6Data() {
+var text6 = localStorage.getItem("text6");
+text6.textContent=text6;
 
-console.log(text)
+console.log(text6)
 }
-getTextData();
-
+getText6Data();
 saveBtn.addEventListener("click", function() {
-    var text = document.querySelector("#text").value
-    localStorage.setItem("text", text);
-    getTextData()
+    var text6 = document.querySelector("#text6").value
+    localStorage.setItem("text6", text6);
+    getText6Data()
+    
 })
+$('.saveBtn').on('click',function(){
+    var timeOfEvent = $(this).siblings('.description').attr('data');
+    console.log(timeOfEvent)
+    var perform = $(this).siblings('.description').val();
+    console.log(perform)
+    function save(){
+        localStorage.setItem(timeOfEvent, perform);
+    }
+    save();
 
-
-$('#color-9  .form-control').val(localStorage.getItem('color-9'))
+$('#color-6  .form-control').val(localStorage.getItem('color-6'))
 $('#color-10  .form-control').val(localStorage.getItem('color-10'))
 
