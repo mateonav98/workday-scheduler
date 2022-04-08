@@ -28,15 +28,14 @@ textarea{
 .time-block{
   text-align:left;
   border-radius: 15px;
-  width: 1200px;
-  justify-content: center;
-  padding: 20px;
+ 
 }
 
 .row {
   white-space: pre-wrap;
   height: 80px;
   border-top: 1px solid white;;
+  ;
 }
 
 .hour {
@@ -97,3 +96,9 @@ textarea{
   margin-right: 15px;
   width: 70px;
 }
+
+
+/* .form-control {
+  background-color: palevioletred;
+
+} */
